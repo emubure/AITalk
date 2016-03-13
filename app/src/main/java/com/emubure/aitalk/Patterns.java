@@ -1,14 +1,14 @@
 package com.emubure.aitalk;
 
+import android.content.Context;
+
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
-/**
- * Created by Ray on 2016/02/28.
- */
+
 @Table(name = "Patterns")
-public class Patterns extends Model {
+public class Patterns extends Model{
 
 
     @Column(name = "word")

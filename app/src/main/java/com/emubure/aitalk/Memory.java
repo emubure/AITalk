@@ -4,15 +4,9 @@ import android.content.Context;
 
 import com.activeandroid.Model;
 
-/**
- * Created by Ray on 2016/02/28.
- */
-public class Memory extends Model {
+public class Memory {
 
     Context c;
-
-    public Memory() {
-    }
 
     public Memory(Context con) {
         c = con;

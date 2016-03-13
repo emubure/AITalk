@@ -21,19 +21,21 @@ public class MainActivity extends Activity {
 
     Memory memory;
     Reply reply;
+    Patterns patterns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        reply = new Reply(getApplicationContext());
+        memory = new Memory(getApplicationContext());
+
         aiText = (TextView) findViewById(R.id.AIText);
         meText = (EditText) findViewById(R.id.meText);
 
         Context testContext = getApplicationContext();
         Log.d("MainActivity", testContext.toString());
-
-        reply = new Reply(getApplicationContext());
 
         memory.setData();
 
@@ -47,7 +49,7 @@ public class MainActivity extends Activity {
                     inputMethodManager.hideSoftInputFromWindow(meText.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
                     //”½‰ˆ—
                     reply.search(meText.toString());//meText‚ÅŒŸõ
-                    aiText.setText(reply.aiReply);//ŒŸõŒ‹‰Ê‚ğaiText‚É
+                    //aiText.setText(reply.aiReply);//ŒŸõŒ‹‰Ê‚ğaiText‚É
 
                     return true;
                 }
